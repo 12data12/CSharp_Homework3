@@ -1,21 +1,13 @@
-﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом. 
+﻿// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-Console.Write("Enter a five-digit number: ");
+Console.Write("Enter number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-string digit = Convert.ToString(number);
+int index = 1;
+Console.WriteLine();
 
-if(number >= 10000 && number <= 100000)
+while(index <= number)
 {
-    if(digit[0]==digit[4] && digit[1]==digit[3])
-    {
-        Console.WriteLine("Your number is a palindrome.");
-    }
-    else
-    {
-        Console.WriteLine("Your number is not a palindrome.");
-    }
-}
-else
-{
-    Console.WriteLine("The entered number is incorrect. Try again!");
+    double result = Math.Pow(index,3);
+    Console.WriteLine(result);
+    index++;
 }
